@@ -1,7 +1,6 @@
 ## Hi there 👋 It's me Elango.s
 
 Student  @ RD National College of arts and science
-<img align="right" width="370" height="290" src="https://i.pinimg.com/originals/47/f0/34/47f0342cec72b800463bf003eac1257e.gif">
 - 🔭 Here's my [portfolio](https://)                                                 
 - 🌱 I’m currently learning DSA
 - 👯 I’m looking to collaborate on 3D animated websites
