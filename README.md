@@ -5,7 +5,7 @@ Student  @ RD National College of arts and science
 - 🔭 Here's my [portfolio](https://)                                                 
 - 🌱 I’m currently learning DSA
 - 👯 I’m looking to collaborate on 3D animated websites
-- 🤔 I’m looking for help with Placements in FAANG
+- 🤔 I’m looking for help with Placements in MAANG
 - 💬 Ask me about Tech
 -  😄 Pronouns: Techie
  - 💬 Ask me about new tech Q\A
