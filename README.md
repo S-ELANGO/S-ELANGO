@@ -1,7 +1,7 @@
 ## Hi there 👋 It's me Elango.s
 
 Student  @ RD National College of arts and science
-- 🔭 Here's my [portfolio](https://elangos.web.app/)                                                 
+- 🔭 Here's my [portfolio](https://elangotech.web.app/)                                                 
 - 🌱 I’m currently learning DSA
 - 👯 I’m looking to collaborate on 3D animated websites
 - 🤔 I’m looking for help with Placements in MAANG
