@@ -14,9 +14,9 @@ AI/ML Developer focused on **Python, AI Agents, RAG, and intelligent systems**.
 - 🔗 [GitHub](https://github.com/S-ELANGO) · [LinkedIn](https://www.linkedin.com/in/elango-s-elango/)
 
 
-<svg xmlns="http://w3.org" width="600" height="400" viewBox="0 0 600 400" fill="none">
+<!-- <svg xmlns="http://w3.org" width="600" height="400" viewBox="0 0 600 400" fill="none">
   
-  <!-- Styling for our Markdown Elements -->
+  <!-- Styling for our Markdown Elements 
   <style>
     .card-bg {
       fill: #0d1117;
@@ -59,10 +59,10 @@ AI/ML Developer focused on **Python, AI Agents, RAG, and intelligent systems**.
     }
   </style>
 
-  <!-- Background Card -->
+  <!-- Background Card -
   <rect width="600" height="400" class="card-bg" />
 
-  <!-- FOREIGN OBJECT: This lets us render HTML/Markdown layout inside SVG -->
+  <!-- FOREIGN OBJECT: This lets us render HTML/Markdown layout inside SVG --
   <foreignObject x="20" y="20" width="560" height="360">
     <div xmlns="http://w3.org" class="md-container">
       
@@ -75,12 +75,11 @@ AI/ML Developer focused on **Python, AI Agents, RAG, and intelligent systems**.
         <li><strong>Language:</strong> Python, TypeScript</li>
         <li><strong>Frameworks:</strong> <code>FastAPI</code>, <code>LangGraph</code>, LangChain</li>
         <li><strong>Databases:</strong> Neo4j, Qdrant Vector DB</li>
+  </foreignObject>
+</svg>
       </ul>
 
       <h2>## Current Status</h2>
       <p>Building automated workflow <code>RAG.pipeline()</code> agents.</p>
 
     </div>
-  </foreignObject>
-</svg>
-
