@@ -1,46 +1,50 @@
 <div align="center">
 
-<img src="assets/profile-dot.svg" width="180" alt="Elango dot matrix portrait"/>
-
-# ELANGO S
-
-### AI/ML Engineer · Python Developer · AI Agents & RAG
-
-<p>
-  <a href="https://github.com/S-ELANGO">
-    <img src="https://img.shields.io/badge/GitHub-S--ELANGO-111827?style=flat-square&logo=github&logoColor=white"/>
-  </a>
-  <a href="https://www.linkedin.com/in/elango-s-elango/">
-    <img src="https://img.shields.io/badge/LinkedIn-Elango%20S-111827?style=flat-square&logo=linkedin&logoColor=white"/>
-  </a>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg">
+  <img src="./dark.svg" alt="Elango, software developer building MUBIS, a multi-role employee productivity platform">
+</picture>
 
 </div>
 
----
+# Hi, I'm Elango 👋
 
-## `whoami`
+I'm a software developer based in the Bengaluru area. I build software that helps teams understand how work actually happens, and I'm currently focused on **MUBIS**.
 
-```python
-class Elango:
+## About
 
-    role = "AI/ML Engineer"
-    focus = [
-        "Artificial Intelligence",
-        "AI Agents",
-        "RAG Systems",
-        "Python Development",
-        "Backend Engineering",
-        "System Design"
-    ]
+- Building **MUBIS (Multi-User Behavior Intelligence System)**, a multi-role employee productivity platform
+- Currently learning: YOUR_CURRENT_LEARNING_TOPICS
+- Interested in: YOUR_INTERESTS
 
-    currently_learning = [
-        "Agentic AI",
-        "RAG Architecture",
-        "A2A Systems",
-        "LLM Applications",
-        "MLflow",
-        "Cloud & DevOps"
-    ]
+## Featured Projects
 
-    mindset = "Learn → Build → Experiment → Improve"
+| Project | Description |
+| --- | --- |
+| **MUBIS** | Multi-role employee productivity platform |
+| **YOUR_PROJECT_2** | One short factual line |
+| **YOUR_PROJECT_3** | One short factual line |
+
+## Engineering Stack
+
+- **Languages:** YOUR_LANGUAGES
+- **Backend:** YOUR_BACKEND_TECH
+- **Frontend:** YOUR_FRONTEND_TECH
+- **Databases:** YOUR_DATABASES
+- **Tools / Cloud:** YOUR_TOOLS
+
+## GitHub Activity
+
+<div align="center">
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&hide_border=true)
+
+</div>
+
+## Connect
+
+- GitHub: [YOUR_GITHUB_USERNAME](https://github.com/YOUR_GITHUB_USERNAME)
+- LinkedIn: [YOUR_NAME](https://www.linkedin.com/in/YOUR_LINKEDIN_ID)
+- Portfolio: [YOUR_SITE](https://YOUR_PORTFOLIO_URL)
+- Email: YOUR_EMAIL
