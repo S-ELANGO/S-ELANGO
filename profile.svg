@@ -742,7 +742,7 @@
 
 
     <!-- MUBIS -->
-    <text
+    <!-- <text
       x="12"
       y="22"
       class="label-cyan"
@@ -764,11 +764,11 @@
       class="white-text"
     >
       Employee productivity &amp; behavior intelligence
-    </text>
+    </text> -->
 
 
     <!-- Graph RAG -->
-    <text
+    <!-- <text
       x="12"
       y="42"
       class="label-cyan"
@@ -790,11 +790,11 @@
       class="white-text"
     >
       Graph-based retrieval with Neo4j
-    </text>
+    </text> -->
 
 
     <!-- Vectorless RAG -->
-    <text
+    <!-- <text
       x="12"
       y="62"
       class="label-cyan"
@@ -808,7 +808,7 @@
       class="muted-dots"
     >
       ...............
-    </text>
+    </text> -->
 
     <text
       x="175"
@@ -846,7 +846,7 @@
 
 
     <!-- Smart Pole -->
-    <text
+    <!-- <text
       x="12"
       y="102"
       class="label-cyan"
@@ -868,7 +868,7 @@
       class="white-text"
     >
       Distress management &amp; response workflow
-    </text>
+    </text> -->
 
   </g>
 
