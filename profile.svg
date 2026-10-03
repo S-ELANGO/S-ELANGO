@@ -1,117 +1,268 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  width="1180"
-  height="610"
-  viewBox="0 0 1180 610"
-  role="img"
-  aria-label="Elango AI Engineer GitHub profile"
->
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 600" width="100%" height="100%">
   <defs>
-    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#020617"/>
-      <stop offset="50%" stop-color="#07111F"/>
-      <stop offset="100%" stop-color="#0B1220"/>
-    </linearGradient>
-    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="50%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#10B981"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <!-- Sci-Fi Glow & Blur Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
       </feMerge>
     </filter>
-    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
-      <path d="M24 0H0V24" fill="none" stroke="#22D3EE" stroke-opacity=".08"/>
+
+    <filter id="laser-glow" x="-30%" y="-100%" width="160%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="blur1" />
+      <feGaussianBlur stdDeviation="1" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Scan Beam Gradient -->
+    <linearGradient id="scanBeamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00f3ff" stop-opacity="0" />
+      <stop offset="70%" stop-color="#00f3ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- CRT Scanline Pattern -->
+    <pattern id="scanlines" width="100" height="4" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="100" y2="0" stroke="#000000" stroke-width="1.5" opacity="0.4" />
     </pattern>
+
+    <!-- Halftone Dot Grid Pattern -->
+    <pattern id="dotMatrix" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r="1.1" fill="#38bdf8" opacity="0.4" />
+    </pattern>
+
+    <!-- Profile Area Clip Path -->
+    <clipPath id="photoClip">
+      <rect x="52" y="112" width="376" height="376" rx="10" />
+    </clipPath>
+
+    <style>
+      @keyframes scan {
+        0% { transform: translateY(0px); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(380px); opacity: 0; }
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      .scanner-beam {
+        animation: scan 3s ease-in-out infinite alternate;
+      }
+      .live-dot {
+        animation: blink 1.8s infinite ease-in-out;
+      }
+      .text-font {
+        font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+      }
+    </style>
   </defs>
 
-  <rect width="1180" height="610" rx="24" fill="url(#background)"/>
-  <rect x="10" y="10" width="1160" height="590" rx="22" fill="url(#grid)"/>
+  <!-- Dark Background -->
+  <rect width="950" height="600" fill="#040b14" rx="16" />
 
-  <rect x="25" y="25" width="1130" height="45" rx="12" fill="#020617" stroke="#164E63"/>
-  <circle cx="50" cy="47" r="7" fill="#EF4444"/>
-  <circle cx="72" cy="47" r="7" fill="#FBBF24"/>
-  <circle cx="94" cy="47" r="7" fill="#22C55E"/>
+  <!-- Outer HUD Frame -->
+  <rect x="18" y="18" width="914" height="564" rx="14" fill="#05101f" stroke="#0284c7" stroke-width="2" />
+  
+  <!-- Outer Corner HUD Accents -->
+  <path d="M 28 45 L 28 28 L 45 28" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <path d="M 922 45 L 922 28 L 905 28" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <path d="M 28 555 L 28 572 L 45 572" fill="none" stroke="#38bdf8" stroke-width="3" />
+  <path d="M 922 555 L 922 572 L 905 572" fill="none" stroke="#38bdf8" stroke-width="3" />
 
-  <text x="125" y="52" fill="#22D3EE" font-family="monospace" font-size="15" font-weight="bold">elango@developer:~ / README.md</text>
-  <text x="850" y="52" fill="#22D3EE" font-family="monospace" font-size="13">&lt;&gt; Code</text>
-  <text x="930" y="52" fill="#22D3EE" font-family="monospace" font-size="13">⊞ Projects</text>
-  <text x="1030" y="52" fill="#22D3EE" font-family="monospace" font-size="13">◯ Contact</text>
+  <!-- Window Header / Tabs -->
+  <circle cx="50" cy="46" r="6" fill="#ef4444" />
+  <circle cx="70" cy="46" r="6" fill="#f59e0b" />
+  <circle cx="90" cy="46" r="6" fill="#10b981" />
+  
+  <text x="120" y="51" fill="#38bdf8" font-size="14" font-weight="700" class="text-font">elango_profile.md &gt;_</text>
 
-  <rect x="40" y="90" width="500" height="470" rx="18" fill="#020617" fill-opacity=".85" stroke="url(#neon)" stroke-width="2" filter="url(#glow)"/>
-  <text x="62" y="112" fill="#22D3EE" font-family="monospace" font-size="13" font-weight="bold" letter-spacing="2">VISUAL.MAP</text>
+  <g transform="translate(560, 36)" font-size="12" class="text-font" fill="#67e8f9">
+    <text x="0" y="15">&lt;/&gt; Code</text>
+    <text x="75" y="15">◫ Projects</text>
+    <text x="165" y="15">⊟ Experience</text>
+    <text x="270" y="15">✉ Contact</text>
+  </g>
 
-  <circle cx="290" cy="300" r="125" fill="none" stroke="#22D3EE" stroke-opacity=".25" stroke-width="2"/>
-  <circle cx="290" cy="300" r="90" fill="none" stroke="#7C3AED" stroke-opacity=".35" stroke-width="2"/>
-  <ellipse cx="290" cy="300" rx="180" ry="70" fill="none" stroke="#22D3EE" stroke-opacity=".3">
-    <animateTransform attributeName="transform" type="rotate" from="0 290 300" to="360 290 300" dur="12s" repeatCount="indefinite"/>
-  </ellipse>
+  <!-- ================= LEFT PANEL: VISUAL.MAP ================= -->
+  <rect x="42" y="78" width="396" height="452" rx="10" fill="#041527" stroke="#0ea5e9" stroke-width="1.8" />
+  
+  <!-- VISUAL.MAP Header Tag -->
+  <path d="M 52 78 L 165 78 L 175 96 L 52 96 Z" fill="#0284c7" opacity="0.3" />
+  <text x="60" y="91" fill="#38bdf8" font-size="11" font-weight="800" class="text-font" letter-spacing="1.5">VISUAL.MAP</text>
 
-  <circle cx="290" cy="300" r="12" fill="#22D3EE" filter="url(#glow)">
-    <animate attributeName="r" values="10;14;10" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="170" cy="220" r="6" fill="#7C3AED"/>
-  <circle cx="410" cy="220" r="6" fill="#10B981"/>
-  <circle cx="180" cy="400" r="6" fill="#22D3EE"/>
-  <circle cx="400" cy="400" r="6" fill="#7C3AED"/>
+  <!-- Scanning Target Viewport -->
+  <g clip-path="url(#photoClip)">
+    <!-- Base Hologram Layer -->
+    <rect x="52" y="112" width="376" height="376" fill="#031b2e" />
 
-  <line x1="170" y1="220" x2="290" y2="300" stroke="#22D3EE" stroke-opacity=".5"/>
-  <line x1="410" y1="220" x2="290" y2="300" stroke="#22D3EE" stroke-opacity=".5"/>
-  <line x1="180" y1="400" x2="290" y2="300" stroke="#22D3EE" stroke-opacity=".5"/>
-  <line x1="400" y1="400" x2="290" y2="300" stroke="#22D3EE" stroke-opacity=".5"/>
+    <!-- Replace the href below with a direct raw URL of your portrait for full clarity -->
+    <image href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9tkyD1bTfH6LOuwGIuuN7-6HNqe0RLDZqG8nvmMn2Qw&s" 
+           x="52" y="112" width="376" height="376" 
+           preserveAspectRatio="xMidYMid slice" 
+           opacity="0.85" />
 
-  <text x="100" y="175" fill="#67E8F9" font-family="monospace" font-size="11">&lt;AI_AGENT /&gt;</text>
-  <text x="340" y="175" fill="#A78BFA" font-family="monospace" font-size="11">RAG.pipeline()</text>
-  <text x="105" y="470" fill="#10B981" font-family="monospace" font-size="11">Python → FastAPI</text>
-  <text x="335" y="470" fill="#22D3EE" font-family="monospace" font-size="11">LangGraph → LLM</text>
+    <!-- Cyber Matrix Scanline & Dots overlay -->
+    <rect x="52" y="112" width="376" height="376" fill="url(#dotMatrix)" mix-blend-mode="screen" />
+    <rect x="52" y="112" width="376" height="376" fill="url(#scanlines)" />
 
-  <rect x="55" y="140" width="470" height="1" fill="#22D3EE" opacity=".6">
-    <animate attributeName="y" values="140;530;140" dur="7s" repeatCount="indefinite"/>
-  </rect>
+    <!-- Sci-Fi Reticle Overlay -->
+    <circle cx="240" cy="300" r="130" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="8 6" fill="none" opacity="0.4" />
+    <circle cx="240" cy="300" r="100" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 4" fill="none" opacity="0.3" />
+    <line x1="240" y1="120" x2="240" y2="480" stroke="#0284c7" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.4" />
+    <line x1="60" y1="300" x2="420" y2="300" stroke="#0284c7" stroke-width="0.8" stroke-dasharray="4 8" opacity="0.4" />
 
-  <text x="70" y="530" fill="#94A3B8" font-family="monospace" font-size="11">~/profile $ build --ship</text>
+    <!-- ANIMATED SCANNING BEAM -->
+    <g class="scanner-beam">
+      <rect x="52" y="100" width="376" height="35" fill="url(#scanBeamGrad)" />
+      <line x1="52" y1="135" x2="428" y2="135" stroke="#67e8f9" stroke-width="2.5" filter="url(#laser-glow)" />
+      <circle cx="70" cy="135" r="3" fill="#ffffff" filter="url(#glow)" />
+      <circle cx="410" cy="135" r="3" fill="#ffffff" filter="url(#glow)" />
+    </g>
+  </g>
 
-  <rect x="560" y="90" width="580" height="470" rx="18" fill="#020617" fill-opacity=".88" stroke="url(#neon)" stroke-width="2" filter="url(#glow)"/>
-  <text x="585" y="112" fill="#22D3EE" font-family="monospace" font-size="13" font-weight="bold" letter-spacing="2">SYSTEM.INFO</text>
+  <!-- Left Footer Status -->
+  <text x="56" y="515" fill="#38bdf8" font-size="11.5" class="text-font">&gt; Scanning profile...</text>
+  <text x="390" y="515" fill="#38bdf8" font-size="11.5" class="text-font" font-weight="700">100%</text>
 
-  <circle cx="1080" cy="108" r="5" fill="#10B981">
-    <animate attributeName="opacity" values="1;.3;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="1092" y="112" fill="#10B981" font-family="monospace" font-size="11">online</text>
 
-  <text x="585" y="145" fill="#60A5FA" font-family="monospace" font-size="13" font-weight="bold">elango@developer:~$ ./profile.sh</text>
+  <!-- ================= RIGHT PANEL: SYSTEM.INFO ================= -->
+  <rect x="460" y="78" width="450" height="452" rx="10" fill="#041527" stroke="#0ea5e9" stroke-width="1.8" />
+  
+  <!-- SYSTEM.INFO Header Tag -->
+  <path d="M 470 78 L 590 78 L 600 96 L 470 96 Z" fill="#0284c7" opacity="0.3" />
+  <text x="478" y="91" fill="#38bdf8" font-size="11" font-weight="800" class="text-font" letter-spacing="1.5">SYSTEM.INFO</text>
+  
+  <circle cx="830" cy="89" r="4.5" fill="#22c55e" class="live-dot" />
+  <text x="842" y="93" fill="#22c55e" font-size="11.5" font-weight="bold" class="text-font">Online</text>
 
-  <text x="585" y="180" fill="#22D3EE" font-family="monospace" font-size="12">&gt; NAME</text>
-  <text x="720" y="180" fill="#F8FAFC" font-family="monospace" font-size="12">Elango S</text>
-  <text x="585" y="210" fill="#22D3EE" font-family="monospace" font-size="12">&gt; ROLE</text>
-  <text x="720" y="210" fill="#F8FAFC" font-family="monospace" font-size="12">AI/ML Engineer</text>
-  <text x="585" y="240" fill="#22D3EE" font-family="monospace" font-size="12">&gt; FOCUS</text>
-  <text x="720" y="240" fill="#F8FAFC" font-family="monospace" font-size="12">AI Agents · RAG</text>
-  <text x="585" y="270" fill="#22D3EE" font-family="monospace" font-size="12">&gt; STACK</text>
-  <text x="720" y="270" fill="#F8FAFC" font-family="monospace" font-size="12">Python · FastAPI · LangGraph</text>
-  <text x="720" y="292" fill="#94A3B8" font-family="monospace" font-size="12">Neo4j · Qdrant · MySQL</text>
+  <!-- Identity Info -->
+  <g transform="translate(480, 115)">
+    <!-- User Icon -->
+    <circle cx="16" cy="14" r="8" stroke="#38bdf8" stroke-width="2" fill="none" />
+    <path d="M 6 32 C 6 24, 26 24, 26 32" stroke="#38bdf8" stroke-width="2" fill="none" />
+    
+    <text x="42" y="16" fill="#38bdf8" font-size="20" font-weight="800" class="text-font">Elango S</text>
+    <text x="42" y="34" fill="#94a3b8" font-size="11" class="text-font">AI/ML Engineer  •  Python Developer  •  AI Agents &amp; RAG</text>
+  </g>
 
-  <text x="585" y="330" fill="#22D3EE" font-family="monospace" font-size="12">&gt; PROJECTS</text>
-  <text x="605" y="360" fill="#67E8F9" font-family="monospace" font-size="12">• MUBIS</text>
-  <text x="720" y="360" fill="#CBD5E1" font-family="monospace" font-size="12">Behavior Intelligence</text>
-  <text x="605" y="385" fill="#67E8F9" font-family="monospace" font-size="12">• Graph RAG</text>
-  <text x="720" y="385" fill="#CBD5E1" font-family="monospace" font-size="12">Neo4j Retrieval</text>
-  <text x="605" y="410" fill="#67E8F9" font-family="monospace" font-size="12">• Vectorless RAG</text>
-  <text x="720" y="410" fill="#CBD5E1" font-family="monospace" font-size="12">Tree-based Retrieval</text>
-  <text x="605" y="435" fill="#67E8F9" font-family="monospace" font-size="12">• Feedback Agent</text>
+  <!-- Key-Value Metadata -->
+  <g transform="translate(480, 175)" font-size="11.5" class="text-font">
+    <text x="0" y="0" fill="#00f3ff">&gt;&gt; Role</text>
+    <text x="160" y="0" fill="#e2e8f0">SDE in AI/ML (Internship)</text>
 
-  <text x="585" y="475" fill="#22D3EE" font-family="monospace" font-size="12">&gt; LINKS</text>
-  <text x="605" y="505" fill="#67E8F9" font-family="monospace" font-size="12">GitHub</text>
-  <text x="720" y="505" fill="#CBD5E1" font-family="monospace" font-size="12">github.com/S-ELANGO</text>
-  <text x="605" y="530" fill="#67E8F9" font-family="monospace" font-size="12">LinkedIn</text>
-  <text x="720" y="530" fill="#CBD5E1" font-family="monospace" font-size="12">linkedin.com/in/elango-s-elango/</text>
+    <text x="0" y="22" fill="#00f3ff">⮞ Company</text>
+    <text x="160" y="22" fill="#e2e8f0">Truminds Software Systems</text>
 
-  <rect x="585" y="545" width="8" height="15" fill="#F8FAFC">
-    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-  </rect>
+    <text x="0" y="44" fill="#00f3ff">📍 Location</text>
+    <text x="160" y="44" fill="#e2e8f0"> India</text>
+
+    <text x="0" y="66" fill="#00f3ff">💼 Experience</text>
+    <text x="160" y="66" fill="#e2e8f0">4+ Years</text>
+
+    <text x="0" y="88" fill="#00f3ff">🎯 Focus</text>
+    <text x="160" y="88" fill="#e2e8f0">AI Agents • RAG • Full Stack • System Design</text>
+  </g>
+
+  <!-- Tech Stack Badges -->
+  <g transform="translate(480, 290)">
+    <text x="0" y="0" fill="#38bdf8" font-size="12" font-weight="700" class="text-font">⚙ Tech Stack</text>
+    
+    <!-- Row 1 -->
+    <g transform="translate(0, 10)">
+      <rect x="0" y="0" width="55" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="10" y="14" fill="#7dd3fc" font-size="10" class="text-font">Python</text>
+
+      <rect x="62" y="0" width="56" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="71" y="14" fill="#7dd3fc" font-size="10" class="text-font">FastAPI</text>
+
+      <rect x="125" y="0" width="50" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="135" y="14" fill="#7dd3fc" font-size="10" class="text-font">React</text>
+
+      <rect x="182" y="0" width="70" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="190" y="14" fill="#7dd3fc" font-size="10" class="text-font">TypeScript</text>
+
+      <rect x="259" y="0" width="75" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="265" y="14" fill="#7dd3fc" font-size="10" class="text-font">LangGraph</text>
+
+      <rect x="341" y="0" width="55" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="350" y="14" fill="#7dd3fc" font-size="10" class="text-font">Docker</text>
+    </g>
+
+    <!-- Row 2 -->
+    <g transform="translate(0, 36)">
+      <rect x="0" y="0" width="52" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="9" y="14" fill="#7dd3fc" font-size="10" class="text-font">MySQL</text>
+
+      <rect x="58" y="0" width="50" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="69" y="14" fill="#7dd3fc" font-size="10" class="text-font">Neo4j</text>
+
+      <rect x="115" y="0" width="54" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="124" y="14" fill="#7dd3fc" font-size="10" class="text-font">Qdrant</text>
+
+      <rect x="176" y="0" width="55" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="187" y="14" fill="#7dd3fc" font-size="10" class="text-font">SQLite</text>
+
+      <rect x="238" y="0" width="52" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="248" y="14" fill="#7dd3fc" font-size="10" class="text-font">GitHub</text>
+
+      <rect x="297" y="0" width="60" height="20" rx="10" stroke="#0284c7" fill="#082f49" />
+      <text x="306" y="14" fill="#7dd3fc" font-size="10" class="text-font">Postman</text>
+    </g>
+  </g>
+
+  <!-- Featured Projects -->
+  <g transform="translate(480, 368)" font-size="11" class="text-font">
+    <text x="0" y="0" fill="#38bdf8" font-size="12" font-weight="700">📁 Featured Projects</text>
+    <!-- <text x="10" y="18" fill="#38bdf8">• MUBIS</text>
+    <text x="145" y="18" fill="#94a3b8">Employee productivity &amp; behavior intelligence</text> -->
+
+    <text x="10" y="34" fill="#38bdf8">• Graph RAG</text>
+    <text x="145" y="34" fill="#94a3b8">Graph-based retrieval with Neo4j</text>
+
+    <text x="10" y="50" fill="#38bdf8">• Vectorless RAG</text>
+    <text x="145" y="50" fill="#94a3b8">Document-structure based retrieval</text>
+
+    <text x="10" y="66" fill="#38bdf8">• Feedback Loop Agent</text>
+    <text x="145" y="66" fill="#94a3b8">LLM feedback-driven prompt improvement</text>
+  </g>
+
+  <!-- Links Section -->
+  <g transform="translate(480, 460)">
+    <text x="0" y="0" fill="#38bdf8" font-size="12" font-weight="700" class="text-font">🔗 Links</text>
+    
+    <a href="https://github.com/S-ELANGO" target="_blank" style="cursor: pointer;">
+      <rect x="0" y="10" width="125" height="34" rx="6" fill="#082f49" stroke="#0ea5e9" stroke-width="1" />
+      <path d="M 18 20 C 13 20 9 24 9 29 C 9 33 12 36 15 37 C 15.5 37.1 15.5 36.8 15.5 36.5 L 15.5 34.8 C 12.8 35.4 12.2 34.1 12.2 34.1 C 11.8 33 11.1 32.7 11.1 32.7 C 10.2 32.1 11.2 32.1 11.2 32.1 C 12.2 32.2 12.7 33.1 12.7 33.1 C 13.5 34.6 15 34.1 15.6 33.9 C 15.7 33.3 15.9 32.9 16.2 32.7 C 14 32.4 11.7 31.5 11.7 27.6 C 11.7 26.5 12.1 25.6 12.8 24.9 C 12.7 24.6 12.3 23.5 12.9 22.1 C 12.9 22.1 13.8 21.8 15.7 23.1 C 16.5 22.9 17.4 22.8 18.3 22.8 C 19.2 22.8 20.1 22.9 20.9 23.1 C 22.8 21.8 23.7 22.1 23.7 22.1 C 24.3 23.5 23.9 24.6 23.8 24.9 C 24.5 25.6 24.9 26.5 24.9 27.6 C 24.9 31.5 22.6 32.4 20.4 32.6 C 20.8 33 21.1 33.6 21.1 34.6 L 21.1 36.5 C 21.1 36.8 21.2 37.1 21.7 37 C 24.7 36 27.6 33 27.6 29 C 27.6 24 23.3 20 18 20 Z" fill="#38bdf8" />
+      <text x="34" y="24" fill="#38bdf8" font-size="9" font-weight="700" class="text-font">GitHub</text>
+      <text x="34" y="36" fill="#94a3b8" font-size="8.5" class="text-font">/S-ELANGO</text>
+    </a>
+
+    <a href="https://linkedin.com/in/elango-s-elango" target="_blank" style="cursor: pointer;">
+      <rect x="140" y="10" width="135" height="34" rx="6" fill="#082f49" stroke="#0ea5e9" stroke-width="1" />
+      <rect x="150" y="20" width="14" height="14" rx="2" fill="#0284c7" />
+      <text x="153" y="31" fill="#ffffff" font-size="10" font-weight="bold" class="text-font">in</text>
+      <text x="172" y="24" fill="#38bdf8" font-size="9" font-weight="700" class="text-font">LinkedIn</text>
+      <text x="172" y="36" fill="#94a3b8" font-size="8" class="text-font">/in/elango-s-elango</text>
+    </a>
+
+    <g transform="translate(290, 10)">
+      <rect x="0" y="0" width="125" height="34" rx="6" fill="#082f49" stroke="#0284c7" stroke-dasharray="3 3" />
+      <text x="12" y="16" fill="#38bdf8" font-size="10" class="text-font">&gt;_ More</text>
+      <text x="12" y="28" fill="#64748b" font-size="8.5" class="text-font">(Coming Soon)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Terminal Status Bar -->
+  <text x="475" y="562" fill="#00f3ff" font-size="11" font-weight="700" letter-spacing="3" text-anchor="middle" class="text-font">
+    LEARN  •  BUILD  •  SOLVE  •  REPEAT
+  </text>
 </svg>
+
+
